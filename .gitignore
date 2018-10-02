@@ -1,3 +1,12 @@
+# IDE
+.idea/
+
+# private key
+private_key.py
+
+# Vim
+*.swp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
