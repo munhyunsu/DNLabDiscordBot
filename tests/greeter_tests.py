@@ -1,12 +1,12 @@
 import unittest
 import unittest.mock
 
-from modules.hello import Hello
+from modules.greeter import Greeter
 
 
-class HelloTestCase(unittest.TestCase):
+class GreeterTestCase(unittest.TestCase):
     def setUp(self):
-        self.greeter = Hello()
+        self.greeter = Greeter()
 
     def tearDown(self):
         del self.greeter

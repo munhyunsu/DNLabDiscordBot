@@ -1,7 +1,6 @@
-import discord
 from discord.ext import commands
 
-from modules.hello import Hello
+from dnlab_commands import DNLabCommands
 
 from bot_description import BOT_DESC
 from private_key import CLIENT_TOKEN
@@ -12,8 +11,6 @@ def main():
                        case_insensitive=True,
                        description=BOT_DESC)
 
-    greeter = Hello()
-
     @bot.event
     async def on_ready():
         print('Logged in as')
@@ -21,8 +18,10 @@ def main():
         print(bot.user.id)
         print('----------')
 
-    @bot.command(name='bot',
-                 aliases=['인사'])
-    async def hello(ctx, *args):
-        """채널에 있는 사람에게 인사를 합니다."""
-        await ctx.send(greeter.get_hello(ctx))
+    bot.add_cog(DNLabCommands())
+
+    bot.run(CLIENT_TOKEN)
+
+
+if __name__ == '__main__':
+    main()
