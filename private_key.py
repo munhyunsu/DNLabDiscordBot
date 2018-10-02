@@ -1,1 +1,1 @@
-CLIENT_KEY = ''
+CLIENT_TOKEN = ''
