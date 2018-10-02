@@ -13,7 +13,7 @@ class DNLabCommands(object):
                       aliases=['인사'])
     async def hello(self, ctx, *args):
         """채널에 있는 사람에게 인사를 합니다."""
-        await ctx.send(self.greeter.get_hello(ctx))
+        await ctx.send(self.greeter.get_hello(ctx, args))
 
     @commands.command(name='select',
                       aliases=['선택', '랜덤'])

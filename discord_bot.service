@@ -1,0 +1,10 @@
+[Unit]
+Description=DNLab Discord Bot
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=PYTHONPATH discord_bot.py
+
+[Install]
+WantedBy=multi-user.target
