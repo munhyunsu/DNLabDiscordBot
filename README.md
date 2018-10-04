@@ -5,6 +5,8 @@ DNLab Discord Bot
 
 ## TODO
 - Split BasicBot and others
+- KBB game
+
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
