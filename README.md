@@ -5,6 +5,7 @@ DNLab Discord Bot
 
 ## TODO
 - Split BasicBot and others
+  - name: LuHaCommands, xxx
 - KBB game
 
 
