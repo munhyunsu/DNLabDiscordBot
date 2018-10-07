@@ -7,6 +7,7 @@ DNLab Discord Bot
 - Split BasicBot and others
   - name: LuHaCommands, xxx
 - KBB game
+  - by Hyungjin
 
 
 # Created by
