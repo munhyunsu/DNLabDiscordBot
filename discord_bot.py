@@ -1,6 +1,6 @@
 from discord.ext import commands
 
-from dnlab_commands import DNLabCommands
+from luha_commands import LuHaCommands
 
 from bot_description import BOT_DESC
 from private_key import CLIENT_TOKEN
@@ -18,7 +18,7 @@ def main():
         print(bot.user.id)
         print('----------')
 
-    bot.add_cog(DNLabCommands())
+    bot.add_cog(LuHaCommands())
 
     bot.run(CLIENT_TOKEN)
 

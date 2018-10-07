@@ -4,7 +4,7 @@ from modules.greeter import Greeter
 from modules.item_selector import ItemSelector
 
 
-class DNLabCommands(object):
+class LuHaCommands(object):
     def __init__(self):
         self.greeter = Greeter()
         self.selector = ItemSelector()
