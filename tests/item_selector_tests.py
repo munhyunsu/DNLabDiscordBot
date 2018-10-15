@@ -15,13 +15,14 @@ class ItemSelectorTestCase(unittest.TestCase):
         self.assertEqual(dict(), self.selector.contents)
 
     def test_get_random_of_0_and_1(self):
-        ctx_mock = unittest.mock.MagicMock()
+        author_mock = unittest.mock.Mock(mention='@everyone')
+        ctx_mock = unittest.mock.Mock(author=author_mock)
         vote_list = []
         result = self.selector.get_random(ctx_mock, vote_list)
-        self.assertEqual('선택지가 2개 이상이여야 합니다.', result)
+        self.assertEqual('@everyone 선택지가 2개 이상이여야 합니다.', result)
         vote_list = ['One']
         result = self.selector.get_random(ctx_mock, vote_list)
-        self.assertEqual('선택지가 2개 이상이여야 합니다.', result)
+        self.assertEqual('@everyone 선택지가 2개 이상이여야 합니다.', result)
 
     def test_get_random_of_3(self):
         ctx_mock = unittest.mock.MagicMock()
