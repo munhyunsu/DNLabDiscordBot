@@ -27,4 +27,9 @@ class LuHaCommands(object):
     @commands.command(name='kbb',
                       aliases=['가위바위보'])
     async def kbb(self, ctx, *args):
+        """가위 바위 보를 합니다."""
         await ctx.send(self.kbb_referee.kbb_game(ctx, args))
+
+
+def setup(bot):
+    bot.add_cog(LuHaCommands())
