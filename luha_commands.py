@@ -1,13 +1,16 @@
+import discord
 from discord.ext import commands
 
 from modules.greeter import Greeter
 from modules.item_selector import ItemSelector
+from modules.kawibawibo import KawiBawiBo
 
 
 class LuHaCommands(object):
     def __init__(self):
         self.greeter = Greeter()
         self.selector = ItemSelector()
+        self.kbb_referee = KawiBawiBo()
 
     @commands.command(name='hello',
                       aliases=['인사'])
@@ -20,3 +23,8 @@ class LuHaCommands(object):
     async def select(self, ctx, *args):
         """주어진 항목 중에서 무작위로 1개 선택합니다."""
         await ctx.send(self.selector.get_random(ctx, args))
+
+    @commands.command(name='kbb',
+                      aliases=['가위바위보'])
+    async def kbb(self, ctx, *args):
+        await ctx.send(self.kbb_referee.kbb_game(ctx, args))
