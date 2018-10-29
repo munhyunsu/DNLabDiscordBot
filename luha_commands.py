@@ -4,6 +4,7 @@ from discord.ext import commands
 from modules.greeter import Greeter
 from modules.item_selector import ItemSelector
 from modules.kawibawibo import KawiBawiBo
+from modules.dice import DiceRoll
 
 
 class LuHaCommands(object):
@@ -11,6 +12,7 @@ class LuHaCommands(object):
         self.greeter = Greeter()
         self.selector = ItemSelector()
         self.kbb_referee = KawiBawiBo()
+        self.dice = DiceRoll()
 
     @commands.command(name='hello',
                       aliases=['인사'])
@@ -29,6 +31,12 @@ class LuHaCommands(object):
     async def kbb(self, ctx, *args):
         """가위 바위 보를 합니다."""
         await ctx.send(self.kbb_referee.kbb_game(ctx, args))
+
+    @commands.command(name='dice',
+                      aliases=['주사위'])
+    async def kbb(self, ctx, *args):
+        """주사위를 굴립니다. 사용법: 횟수D면체"""
+        await ctx.send(self.dice.roll_dice(ctx, args))
 
 
 def setup(bot):
