@@ -1,7 +1,5 @@
 from discord.ext import commands
 
-from luha_commands import LuHaCommands
-
 from bot_description import BOT_DESC
 from private_key import CLIENT_TOKEN
 
