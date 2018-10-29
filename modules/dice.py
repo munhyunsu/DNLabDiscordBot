@@ -9,7 +9,10 @@ class DiceRoll(object):
             return '{0.author.mention} 숫자D숫자 형태의 입력이 필요합니다.'.format(ctx)
         elif len(args) >= 1:
             try:
-                roll, dice = map(int, re.findall(r'(\d+)(?:d|D)(\d+)', args[0])[0])
+                if '번' in args[0]:
+                    roll, dice = map(int, re.findall(r'(\d+)(?:번)(\d+)', args[0])[0])
+                else:
+                    roll, dice = map(int, re.findall(r'(\d+)(?:d|D)(\d+)', args[0])[0])
             except IndexError:
                 roll, dice = (None, None)
 

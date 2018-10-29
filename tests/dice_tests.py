@@ -34,3 +34,6 @@ class GreeterTestCase(unittest.TestCase):
         args = ('4d6', )
         self.assertIn('@everyone 6면체 주사위 4번 굴린 결과',
                       self.dice.roll_dice(ctx_mock, args))
+        args = ('4번6', )
+        self.assertIn('@everyone 6면체 주사위 4번 굴린 결과',
+                      self.dice.roll_dice(ctx_mock, args))
