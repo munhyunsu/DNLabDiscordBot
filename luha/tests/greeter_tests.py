@@ -1,7 +1,7 @@
 import unittest
 import unittest.mock
 
-from modules.greeter import Greeter
+from luha.modules.greeter import Greeter
 
 
 class GreeterTestCase(unittest.TestCase):

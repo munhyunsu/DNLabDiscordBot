@@ -9,7 +9,7 @@ def main():
                        case_insensitive=True,
                        description=BOT_DESC)
 
-    extensions = ['luha_commands']
+    extensions = ['luha.luha_commands']
 
     @bot.event
     async def on_ready():

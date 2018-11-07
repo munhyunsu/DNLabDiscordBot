@@ -1,10 +1,9 @@
-import discord
 from discord.ext import commands
 
-from modules.greeter import Greeter
-from modules.item_selector import ItemSelector
-from modules.kawibawibo import KawiBawiBo
-from modules.dice import DiceRoll
+from .modules.greeter import Greeter
+from .modules.item_selector import ItemSelector
+from .modules.kawibawibo import KawiBawiBo
+from .modules.dice import DiceRoll
 
 
 class LuHaCommands(object):

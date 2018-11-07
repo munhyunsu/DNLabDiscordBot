@@ -1,7 +1,7 @@
 import unittest
 import unittest.mock
 
-from modules.dice import DiceRoll
+from luha.modules.dice import DiceRoll
 
 
 class GreeterTestCase(unittest.TestCase):
