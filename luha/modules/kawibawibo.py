@@ -13,3 +13,5 @@ class KawiBawiBo(object):
         elif args[0] in ['가위', '바위', '보']:
             self.entry[ctx.author.name] = args[0]
             return '{0.author.mention} {1} 엔트리!'.format(ctx, args[0])
+        else:
+            return '가위/바위/보 또는 결과를 선택해야합니다.'
