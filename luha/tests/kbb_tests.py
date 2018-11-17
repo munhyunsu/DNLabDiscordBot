@@ -15,10 +15,18 @@ class ItemSelectorTestCase(unittest.TestCase):
         self.assertEqual(dict(), self.kbb_referee.entry)
 
     def test_get_random_of_0_and_1(self):
-        ctx_mock = unittest.mock.MagicMock()
+        author_mock = unittest.mock.Mock(name='player', mention='@player')
+        ctx_mock = unittest.mock.Mock(author=author_mock)
         args = []
         result = self.kbb_referee.kbb_game(ctx_mock, args)
-        self.assertEqual('가위/바위/보 또는 결과를 선택해야합니다.', result)
+        self.assertEqual('@player 가위/바위/보 또는 결과를 선택해야합니다.', result)
+
+    def test_get_wrong_input(self):
+        author_mock = unittest.mock.Mock(name='player', mention='@player')
+        ctx_mock = unittest.mock.Mock(author=author_mock)
+        args = ['주먹']
+        result = self.kbb_referee.kbb_game(ctx_mock, args)
+        self.assertEqual('@player 가위/바위/보 또는 결과를 선택해야합니다.', result)
 
     def test_get_game_result(self):
         author_mock = unittest.mock.Mock(name='player', mention='@player')
