@@ -16,25 +16,29 @@ class LuHaCommands(object):
     @commands.command(name='hello',
                       aliases=['인사'])
     async def hello(self, ctx, *args):
-        """채널에 있는 사람에게 인사를 합니다."""
+        """채널에 있는 사람에게 인사를 합니다.
+        사용법: 인사"""
         await ctx.send(self.greeter.get_hello(ctx, args))
 
     @commands.command(name='select',
                       aliases=['선택', '랜덤'])
     async def select(self, ctx, *args):
-        """주어진 항목 중에서 무작위로 1개 선택합니다."""
+        """주어진 항목 중에서 무작위로 1개 선택합니다.
+        사용법: 선택 하나 둘 셋"""
         await ctx.send(self.selector.get_random(ctx, args))
 
     @commands.command(name='kbb',
                       aliases=['가위바위보'])
     async def kbb(self, ctx, *args):
-        """가위 바위 보를 합니다."""
+        """가위 바위 보를 합니다.
+        사용법: 가위바위보 가위 -> 가위바위보 결과"""
         await ctx.send(self.kbb_referee.kbb_game(ctx, args))
 
     @commands.command(name='dice',
                       aliases=['주사위'])
     async def roll_dice(self, ctx, *args):
-        """주사위를 굴립니다. 사용법: 횟수D면체"""
+        """주사위를 굴립니다.
+        사용법: 횟수D면체"""
         await ctx.send(self.dice.roll_dice(ctx, args))
 
 
