@@ -4,6 +4,7 @@ from .modules.greeter import Greeter
 from .modules.item_selector import ItemSelector
 from .modules.kawibawibo import KawiBawiBo
 from .modules.dice import DiceRoll
+from .modules.search_engine import SearchEngine
 
 
 class LuHaCommands(object):
@@ -12,6 +13,7 @@ class LuHaCommands(object):
         self.selector = ItemSelector()
         self.kbb_referee = KawiBawiBo()
         self.dice = DiceRoll()
+        self.search_engine = SearchEngine()
 
     @commands.command(name='hello',
                       aliases=['인사'])
@@ -40,6 +42,13 @@ class LuHaCommands(object):
         """주사위를 굴립니다.
         사용법: 횟수D면체"""
         await ctx.send(self.dice.roll_dice(ctx, args))
+
+    @commands.command(name='search',
+                      aliases=['검색'])
+    async def search(self, ctx, *args):
+        """검색어가 포함된 URL을 표시합니다.
+        사용법: 검색 [구글|네이버|다음] [검색어]"""
+        await ctx.send(self.search_engine.search(ctx, args))
 
 
 def setup(bot):
