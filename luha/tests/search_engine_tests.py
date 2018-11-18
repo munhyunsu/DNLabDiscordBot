@@ -29,5 +29,5 @@ class SearchEngineTestCase(unittest.TestCase):
         author_mock = unittest.mock.Mock(mention='@everyone')
         ctx_mock = unittest.mock.Mock(author=author_mock)
         args = ('구글', '스플래툰2', '아미보')
-        self.assertEqual('@everyone https://www.google.co.kr/search?q=스플래툰2 아미보',
+        self.assertEqual('@everyone https://www.google.co.kr/search?q=스플래툰2+아미보',
                          self.search.search(ctx_mock, args))

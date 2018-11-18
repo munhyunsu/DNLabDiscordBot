@@ -17,5 +17,5 @@ class SearchEngine(object):
         if args[0] not in self.queries.keys():
             return '{0.author.mention} 지원하지 않는 검색엔진입니다.'.format(ctx)
         query_form = self.queries[args[0]]
-        query = ' '.join(args[1:])
+        query = '+'.join(args[1:])
         return query_form.format(ctx, query)
