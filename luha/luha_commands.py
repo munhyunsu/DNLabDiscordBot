@@ -40,7 +40,7 @@ class LuHaCommands(object):
                       aliases=['주사위'])
     async def roll_dice(self, ctx, *args):
         """주사위를 굴립니다.
-        사용법: 횟수D면체"""
+        사용법: 주사위 횟수D면체"""
         await ctx.send(self.dice.roll_dice(ctx, args))
 
     @commands.command(name='search',
