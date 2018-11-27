@@ -2,6 +2,7 @@ class KawiBawiBo(object):
     def __init__(self):
         self.entry = dict()
 
+    # 서버 구분을 통해 게임 시작-끝을 알려주어야 할 듯
     def kbb_game(self, ctx, args=()):
         if len(args) <= 0:
             return '{0.author.mention} 가위/바위/보 또는 결과를 선택해야합니다.'.format(ctx)
