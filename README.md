@@ -8,7 +8,8 @@ DNLab Discord Bot
   - name: LuHaCommands, xxx
 - KBB game
   - Timeout function?
-
+- Tarot fortune telling
+  - GSpread or txt
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
