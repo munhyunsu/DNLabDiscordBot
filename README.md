@@ -10,6 +10,7 @@ DNLab Discord Bot
   - Timeout function?
 - Tarot fortune telling
   - GSpread or txt
+  - Need prepared images
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
