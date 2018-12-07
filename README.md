@@ -11,6 +11,7 @@ DNLab Discord Bot
 - Tarot fortune telling
   - GSpread or txt
   - Need prepared images
+  - One cards, Three cards, Celtic cross
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
