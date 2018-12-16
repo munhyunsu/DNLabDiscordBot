@@ -12,6 +12,7 @@ DNLab Discord Bot
   - GSpread or txt
   - Need prepared images
   - One cards, Three cards, Celtic cross
+  - Create spread image
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
