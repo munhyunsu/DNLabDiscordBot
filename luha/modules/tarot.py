@@ -3,4 +3,11 @@ import random
 
 
 class TarotReader(object):
-    pass
+    def __init__(self):
+        pass
+
+    def get_cards(self):
+        pass
+
+    def _shuffle(self):
+        pass
