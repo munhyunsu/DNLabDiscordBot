@@ -2,6 +2,7 @@
 DNLab Discord Bot
 
 ## Features
+- Kawi Bawi Bo Game
 
 ## TODO
 - Split BasicBot and others
