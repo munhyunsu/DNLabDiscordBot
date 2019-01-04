@@ -4,10 +4,12 @@ import random
 
 class TarotReader(object):
     def __init__(self):
-        pass
+        self.deck = dict()
 
     def get_cards(self):
         pass
 
     def _shuffle(self):
-        pass
+        for key in self.deck.keys():
+            random.shuffle(self.deck[key])
+

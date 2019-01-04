@@ -1,11 +1,13 @@
 import unittest
 import unittest.mock
 
+from modules.tarot import TarotReader
+
 
 class TarotTestCase(unittest.TestCase):
     def setUp(self):
-        pass
+        self.tarot_reader = TarotReader
 
     def tearDown(self):
-        pass
+        del self.tarot_reader
 
