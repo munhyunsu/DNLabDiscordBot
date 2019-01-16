@@ -2,9 +2,10 @@
 DNLab Discord Bot
 
 ## Features
-- Kawi Bawi Bo Game
+- Kawi-Bawi-Bo (Rock-Paper-Scissors) Game
 
 ## TODO
+- (On dev) Rock-Paper-Scissors based on deep learning
 - Split BasicBot and others
   - name: LuHaCommands, xxx
 - KBB game
