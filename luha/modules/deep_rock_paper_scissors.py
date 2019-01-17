@@ -27,6 +27,7 @@ class RockPaperScissors(object):
             with open(self.log_path, 'w') as f:
                 writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
                 writer.writeheader()
+        self.stats = self._get_stats()
         self.user_path = user_path
         self.user_db = dict()
         if os.path.exists(self.user_path):
@@ -37,17 +38,40 @@ class RockPaperScissors(object):
         p1_hand = self._rparse_hand(ctx.message.content)
         p2_hand = self._get_com_hand()
         score = self._get_score(p1_hand, p2_hand)
+        win_rate, rounds = self._update_rounds(ctx, score)
         self._write_log(ctx, p1_hand, score)
         self._update_user_db(ctx)
-        return '{0.author.mention} {1:2s}(H) vs {2:2s}(C) {3}!!'.format(ctx,
-                                                                        HAND_MAP[p1_hand],
-                                                                        HAND_MAP[p2_hand],
-                                                                        SCORE_MAP[score])
+        return '{0.author.mention} {1} vs {2} {3}!! 총 {4}판 승률: {5:.2%}'.format(ctx,
+                                                                               HAND_MAP[p1_hand],
+                                                                               HAND_MAP[p2_hand],
+                                                                               SCORE_MAP[score],
+                                                                               rounds,
+                                                                               win_rate)
+
+    def _get_stats(self):
+        stats = dict()
+        with open(self.log_path, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                userid = str(row['userid'])
+                score = int(row['score'])
+                stat = stats.get(userid, [0, 0, 0])
+                stat[score - 1] = stat[score - 1] + 1
+                stats[userid] = stat
+        return stats
+
+    def _update_rounds(self, ctx, score):
+        userid = str(ctx.author.id)
+        stat = self.stats.get(userid, [0, 0, 0])
+        stat[score - 1] = stat[score - 1] + 1
+        rounds = sum(stat)
+        win_rate = stat[0] / rounds
+        self.stats[userid] = stat
+        return win_rate, rounds
 
     def _update_user_db(self, ctx):
         user_name = '#'.join(str(ctx.author).split('#')[:-1])
-        user_id = ctx.author.id
-        print(user_id, user_name)
+        user_id = str(ctx.author.id)
         if user_id in self.user_db:
             if self.user_db[user_id] is user_name:
                 return None
