@@ -72,6 +72,8 @@ class RockPaperScissors(object):
         win_rate = stat[0] / rounds
         rank = 1
         for stat in self.stats.values():
+            if sum(stat) < 10:
+                continue
             other_win_rate = stat[0] / sum(stat)
             if win_rate < other_win_rate:
                 rank = rank + 1
