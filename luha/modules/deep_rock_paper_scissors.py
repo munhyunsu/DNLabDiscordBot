@@ -131,7 +131,7 @@ class RockPaperScissors(object):
         history = self.histories.get(user_id, deque(maxlen=MAX_LEN))
         if len(history) != MAX_LEN:
             return random.choice([1, 2, 3])
-        return random.choices([1, 2, 3],
+        return random.choices([2, 3, 1],
                               weights=[history.count(1), history.count(2), history.count(3)],
                               k=1)[0]
 
