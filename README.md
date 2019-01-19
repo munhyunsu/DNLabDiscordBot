@@ -6,6 +6,8 @@ DNLab Discord Bot
 
 ## TODO
 - (On dev) Rock-Paper-Scissors based on deep learning
+  - (Done) Achive log for learning
+  - (Done) Probability base game
 - Split BasicBot and others
   - name: LuHaCommands, xxx
 - KBB game
