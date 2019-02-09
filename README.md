@@ -18,6 +18,7 @@ DNLab Discord Bot
   - Need prepared images
   - One cards, Three cards, Celtic cross
   - Create spread image
+- Vote
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
