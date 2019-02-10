@@ -19,6 +19,7 @@ DNLab Discord Bot
   - One cards, Three cards, Celtic cross
   - Create spread image
 - Vote
+  - using hash value
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
