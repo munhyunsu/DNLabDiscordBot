@@ -8,12 +8,8 @@ DNLab Discord Bot
 - Rock-Paper-Scissors
 
 ## TODO
-- (On dev) Rock-Paper-Scissors based on deep learning
-  - (Done) Achive log for learning
-  - (Done) Probability base game
+- Rock-Paper-Scissors based on deep learning
   - deep learning (1 or 2 layers)
-- Split BasicBot and others
-  - name: LuHaCommands, xxx
 - KBB game
   - Timeout function?
 - Tarot fortune telling
@@ -23,6 +19,13 @@ DNLab Discord Bot
   - Create spread image
 - Vote
   - using hash value
+
+## Done
+- Rock-Paper-Scissors based on deep learning
+  - Achive log for learning
+  - Probability base game
+- Split BasicBot and others
+  - name: LuHaCommands, xxx
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
