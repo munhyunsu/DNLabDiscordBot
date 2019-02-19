@@ -1,7 +1,7 @@
 import unittest
 import unittest.mock
 
-from luha.modules.item_selector import ItemSelector
+from luha_bot.item_selector import ItemSelector
 
 
 class ItemSelectorTestCase(unittest.TestCase):

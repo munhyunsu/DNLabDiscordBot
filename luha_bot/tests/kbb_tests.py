@@ -1,7 +1,7 @@
 import unittest
 import unittest.mock
 
-from luha.modules.kawibawibo import KawiBawiBo
+from luha_bot.kawibawibo import KawiBawiBo
 
 
 class ItemSelectorTestCase(unittest.TestCase):

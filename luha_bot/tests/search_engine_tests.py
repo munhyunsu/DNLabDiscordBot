@@ -1,7 +1,7 @@
 import unittest
 import unittest.mock
 
-from luha.modules.search_engine import SearchEngine
+from luha_bot.search_engine import SearchEngine
 
 
 class SearchEngineTestCase(unittest.TestCase):

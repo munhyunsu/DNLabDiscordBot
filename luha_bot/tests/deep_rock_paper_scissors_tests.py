@@ -1,8 +1,7 @@
 import os
-import unittest
 import unittest.mock
 
-from luha.modules.deep_rock_paper_scissors import RockPaperScissors
+from luha_bot.deep_rock_paper_scissors import RockPaperScissors
 
 FILEPATH = 'rps_history.csv'
 USERPATH = 'rps_user.json'

@@ -1,11 +1,11 @@
 from discord.ext import commands
 
-from .modules.greeter import Greeter
-from .modules.item_selector import ItemSelector
-from .modules.kawibawibo import KawiBawiBo
-from .modules.dice import DiceRoll
-from .modules.search_engine import SearchEngine
-from .modules.deep_rock_paper_scissors import RockPaperScissors
+from greeter import Greeter
+from item_selector import ItemSelector
+from kawibawibo import KawiBawiBo
+from dice import DiceRoll
+from search_engine import SearchEngine
+from deep_rock_paper_scissors import RockPaperScissors
 
 
 class LuHaCommands(object):
