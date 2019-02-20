@@ -1,8 +1,13 @@
+# generated files
+dl_rps_log.csv
+users.json
+
+# private
+private/
+img/
+
 # IDE
 .idea/
-
-# private key
-private_key.py
 
 # Vim
 *.swp
