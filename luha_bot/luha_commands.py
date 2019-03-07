@@ -17,7 +17,7 @@ class LuHaCommands(object):
         self.dice = DiceRoll()
         self.search_engine = SearchEngine()
         self.dl_rps = RockPaperScissors('dl_rps_log.csv', 'users.json')
-        self.tarot_reader = TarotReader('img')
+        self.tarot_reader = TarotReader()
 
     @commands.command(name='hello',
                       aliases=['인사'])
@@ -60,7 +60,8 @@ class LuHaCommands(object):
                       aliases=['타로'])
     async def fortune_tarot(self, ctx, *args):
         """타로카드를 하나 뽑습니다. 타로 뒤에 문자열을 적을 수 있습니다. '!타로 (문자열)'"""
-        await self.tarot_reader.fortune(ctx, args)
+        # await self.tarot_reader.fortune(ctx, args)
+        await ctx.send(self.tarot_reader.fortune(ctx, args))
 
 
 def setup(bot):
