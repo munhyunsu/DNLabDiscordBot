@@ -17,6 +17,8 @@ DNLab Discord Bot
   - Timeout function?
 - Vote
   - using hash value
+- Chungnam National University student restaurant menu crawler
+
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
