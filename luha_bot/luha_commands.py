@@ -69,7 +69,9 @@ class LuHaCommands(commands.Cog):
                       aliases=['에바', '에반데'])
     async def three_out(self, ctx, *args):
         """투표를 합니다. '!에바"""
-        await ctx.send(self.toy.three_out(ctx, args))
+        msg = self.toy.three_out(ctx, args)
+        if msg is not None:
+            await ctx.send(msg)
 
 
 def setup(bot):
