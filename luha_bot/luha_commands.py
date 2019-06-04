@@ -7,9 +7,10 @@ from luha_bot.dice import DiceRoll
 from luha_bot.search_engine import SearchEngine
 from luha_bot.deep_rock_paper_scissors import RockPaperScissors
 from luha_bot.tarot import TarotReader
+from luha_bot.toys import Toys
 
 
-class LuHaCommands(object):
+class LuHaCommands(commands.Cog):
     def __init__(self):
         self.greeter = Greeter()
         self.selector = ItemSelector()
@@ -18,6 +19,7 @@ class LuHaCommands(object):
         self.search_engine = SearchEngine()
         self.dl_rps = RockPaperScissors('dl_rps_log.csv', 'users.json')
         self.tarot_reader = TarotReader()
+        self.toy = Toys()
 
     @commands.command(name='hello',
                       aliases=['인사'])
@@ -62,6 +64,12 @@ class LuHaCommands(object):
         """타로카드를 하나 뽑습니다. 타로 뒤에 문자열을 적을 수 있습니다. '!타로 (문자열)'"""
         # await self.tarot_reader.fortune(ctx, args)
         await ctx.send(self.tarot_reader.fortune(ctx, args))
+
+    @commands.command(name='out',
+                      aliases=['에바', '에반데'])
+    async def three_out(self, ctx, *args):
+        """투표를 합니다. '!에바"""
+        await ctx.send(self.toy.three_out(ctx, args))
 
 
 def setup(bot):
