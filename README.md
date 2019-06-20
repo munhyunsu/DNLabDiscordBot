@@ -13,12 +13,9 @@ DNLab Discord Bot
   - (Done) Achive log for learning
   - (Done) Probability base game
   - deep learning (1 or 2 layers)
-- (Canceled) KBB game
-  - Timeout function?
 - Vote
   - using hash value
 - Chungnam National University student restaurant menu crawler
-
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
