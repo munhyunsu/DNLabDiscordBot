@@ -2,3 +2,6 @@
 discord.py
 gspread
 oauth2client
+#bs4
+pandas
+lxml
