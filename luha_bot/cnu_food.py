@@ -1,4 +1,7 @@
-import 
+import urllib.request
+import urllib.parse
+
+import pandas
 
 class CNUFoo(object):
     def __init__(cache=''):
@@ -8,4 +11,4 @@ class CNUFoo(object):
         self.cache_path = cache
 
     def get_food():
-        
+        pass
