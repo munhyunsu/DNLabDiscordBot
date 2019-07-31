@@ -7,6 +7,7 @@ DNLab Discord Bot
 - Kawi-Bawi-Bo
 - Rock-Paper-Scissors
 - Tarot fortune telling
+- Chungnam National University student restaurant menu crawler
 
 ## TODO
 - Rock-Paper-Scissors based on deep learning
@@ -15,7 +16,6 @@ DNLab Discord Bot
   - deep learning (1 or 2 layers)
 - Vote
   - using hash value
-- Chungnam National University student restaurant menu crawler
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
