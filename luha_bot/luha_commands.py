@@ -8,6 +8,7 @@ from luha_bot.search_engine import SearchEngine
 from luha_bot.deep_rock_paper_scissors import RockPaperScissors
 from luha_bot.tarot import TarotReader
 from luha_bot.toys import Toys
+from luha_bot.cnu_food import CNUFood
 
 
 class LuHaCommands(commands.Cog):
@@ -20,6 +21,7 @@ class LuHaCommands(commands.Cog):
         self.dl_rps = RockPaperScissors('dl_rps_log.csv', 'users.json')
         self.tarot_reader = TarotReader()
         self.toy = Toys()
+        self.cnu_food = CNUFood()
 
     @commands.command(name='hello',
                       aliases=['인사'])
@@ -70,6 +72,14 @@ class LuHaCommands(commands.Cog):
     async def three_out(self, ctx, *args):
         """투표를 합니다. '!에바"""
         msg = self.toy.three_out(ctx, args)
+        if msg is not None:
+            await ctx.send(msg)
+
+    @commands.command(name='food',
+                     aliases=['식단', '밥'])
+    async def cnu_food(self, ctx, *args):
+        """충남대학교 2학생회관 식단, '!밥'"""
+        msg = self.cnu_food.get_food()
         if msg is not None:
             await ctx.send(msg)
 
