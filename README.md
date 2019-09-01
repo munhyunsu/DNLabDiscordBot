@@ -10,7 +10,7 @@ DNLab Discord Bot
 - Chungnam National University student restaurant menu crawler
 
 ## TODO
-- Rock-Paper-Scissors based on deep learning
+- (Canceled) Rock-Paper-Scissors based on deep learning
   - (Done) Achive log for learning
   - (Done) Probability base game
   - deep learning (1 or 2 layers)
