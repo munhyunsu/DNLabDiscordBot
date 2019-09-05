@@ -13,7 +13,7 @@ DNLab Discord Bot
 - (Canceled) Rock-Paper-Scissors based on deep learning
   - (Done) Achive log for learning
   - (Done) Probability base game
-  - deep learning (1 or 2 layers)
+  - (Canceled) deep learning (1 or 2 layers)
 - Vote
   - using hash value
 
