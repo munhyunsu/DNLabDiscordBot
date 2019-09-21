@@ -16,6 +16,8 @@ DNLab Discord Bot
   - (Canceled) deep learning (1 or 2 layers)
 - Vote
   - using hash value
+- Food menu
+  - Need to update other restraurant
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
