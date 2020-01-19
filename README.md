@@ -10,11 +10,10 @@ DNLab Discord Bot
 - Chungnam National University student restaurant menu crawler
 
 ## TODO
-- Vote
-  - using hash value
 - Food menu
   - Need to update other restraurant
   - Need to fix parsing rule
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
+
