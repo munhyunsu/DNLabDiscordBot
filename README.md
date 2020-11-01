@@ -13,6 +13,7 @@ DNLab Discord Bot
 - Food menu
   - Need to update other restraurant
   - Need to fix parsing rule
+- Pooling based emoji
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
