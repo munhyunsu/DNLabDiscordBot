@@ -14,6 +14,7 @@ DNLab Discord Bot
   - Need to update other restraurant
   - Need to fix parsing rule
 - Pooling based emoji
+  - [Ref](https://github.com/jamart28/Discord-Poll-Bot)
 
 # Created by
 - LuHa(munhyunsu@gmail.com)
